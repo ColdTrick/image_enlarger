@@ -2,17 +2,52 @@ define(function(require) {
 	var $ = require('jquery');
 	var elgg = require('elgg');
 	var lightbox = require('elgg/lightbox');
-
-	$(document).on('click', '.elgg-main img', function() {
-		var $img = $(this);
+	
+	var is_valid_image = function(elem) {
+		var $img = $(elem);
+		if (!$img.is('img')) {
+			// not an img element
+			return false;
+		}
+		
 		if ($img.parents('a').length) {
-			return;
+			// img in a link
+			return false;
+		}
+		
+		return true;
+	}
+	
+	var get_image_url = function(elem) {
+		var $img = $(elem);
+		if (!$img.is('img')) {
+			return '';
+		}
+		
+		var data = $img.data();
+		if ((typeof data.highresUrl !== 'undefined')) {
+			return data.highresUrl;
 		}
 		
 		var src = $img.attr('src');
-		if (!src) {
+		if (src.length) {
+			return src;
+		}
+		
+		return '';
+	}
+	
+	$(document).on('click', '.elgg-main img', function() {
+		if (!is_valid_image(this)) {
 			return;
 		}
+		
+		var src = get_image_url(this);
+		if (!src.length) {
+			return;
+		}
+		
+		var $img = $(this);
 		
 		var title = false;
 		if ($img.attr('title')) {
@@ -34,15 +69,15 @@ define(function(require) {
 	});
 
 	$(document).on('mouseenter', '.elgg-main img', function() {
-		var $img = $(this);
-		if ($img.parents('a').length) {
+		if (!is_valid_image(this)) {
 			return;
 		}
 		
-		var src = $img.attr('src');
-		if (!src) {
+		if (!get_image_url(this).length) {
 			return;
 		}
+		
+		var $img = $(this);
 		
 		// adds a pointer cursor to the image
 		$img.css('cursor', 'zoom-in');
