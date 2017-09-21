@@ -62,7 +62,7 @@ define(function(require) {
 			maxWidth: '990px',
 			maxHeight: '80%',
 			title: title,
-			html: '<center style="height: 100%;"><img src="' + src + '" style="width: 100%; height: 100%; object-fit: contain;" /></center>',
+			html: '<div style="width: 100%; height: 100%; background-image:url(' + src + '); background-position: center center; background-size: contain; background-repeat: no-repeat;"></div>',
 		};
 		
 		lightbox.open(opts);
