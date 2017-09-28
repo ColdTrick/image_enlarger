@@ -15,6 +15,11 @@ define(function(require) {
 			return false;
 		}
 		
+		if ($img.parents('.groups-profile-icon').length) {
+			// group profile icon
+			return false;
+		}
+		
 		return true;
 	}
 	
