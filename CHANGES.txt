@@ -1,6 +1,12 @@
 Version history
 ===============
 
+1.1 (2017-10-04):
+
+- added: support for high resolution image in lightbox
+- fixed: group profile icon should not be enlarged
+- fixed: scaling issue in IE
+
 1.0 (2017-05-30):
 
 - added: initial release
