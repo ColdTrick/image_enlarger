@@ -1,6 +1,10 @@
 Version history
 ===============
 
+2.0.1 (2019-03-27):
+
+- several small chores/fixes
+
 2.0 (2019-03-27):
 
 - added: now using bootstrap class to init plugin
