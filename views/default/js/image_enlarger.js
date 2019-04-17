@@ -15,11 +15,6 @@ define(function(require) {
 			return false;
 		}
 		
-		if ($img.parents('.groups-profile-icon').length) {
-			// group profile icon
-			return false;
-		}
-		
 		return true;
 	}
 	
@@ -42,7 +37,7 @@ define(function(require) {
 		return '';
 	}
 	
-	$(document).on('click', '.elgg-main img', function() {
+	$(document).on('click', '.elgg-ouput img', function() {
 		if (!is_valid_image(this)) {
 			return;
 		}
@@ -73,7 +68,7 @@ define(function(require) {
 		lightbox.open(opts);
 	});
 
-	$(document).on('mouseenter', '.elgg-main img', function() {
+	$(document).on('mouseenter', '.elgg-output img', function() {
 		if (!is_valid_image(this)) {
 			return;
 		}
