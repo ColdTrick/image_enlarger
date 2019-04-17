@@ -1,6 +1,10 @@
 Version history
 ===============
 
+2.0.2 (2019-04-17):
+
+- fixed: only enlarge images in output
+
 2.0.1 (2019-03-27):
 
 - several small chores/fixes
