@@ -37,7 +37,7 @@ define(function(require) {
 		return '';
 	}
 	
-	$(document).on('click', '.elgg-ouput img', function() {
+	$(document).on('click', '.elgg-output img', function() {
 		if (!is_valid_image(this)) {
 			return;
 		}
