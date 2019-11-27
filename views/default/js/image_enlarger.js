@@ -15,6 +15,11 @@ define(function(require) {
 			return false;
 		}
 		
+		if ($img.is('[usemap]')) {
+			// img uses a clickmap
+			return false;
+		}
+		
 		return true;
 	}
 	
