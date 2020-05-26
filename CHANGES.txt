@@ -1,6 +1,10 @@
 Version history
 ===============
 
+2.0.4 (2020-05-26):
+
+- fixed: no click events added to images that have a clickmap
+
 2.0.3 (2019-05-29):
 
 - fixed: clicking on image doesn't enlarge
