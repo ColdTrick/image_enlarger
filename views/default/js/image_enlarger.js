@@ -1,7 +1,4 @@
-define(function(require) {
-	var $ = require('jquery');
-	var elgg = require('elgg');
-	var lightbox = require('elgg/lightbox');
+define(['jquery', 'elgg/lightbox'], function($, lightbox) {
 	
 	var is_valid_image = function(elem) {
 		var $img = $(elem);
