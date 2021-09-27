@@ -4,7 +4,7 @@ use ColdTrick\ImageEnlarger\Bootstrap;
 
 return [
 	'plugin' => [
-		'version' => '2.0.4',
+		'version' => '3.0',
 	],
 	'bootstrap' => Bootstrap::class,
 ];
