@@ -1,6 +1,6 @@
 define(['jquery', 'elgg/lightbox'], function($, lightbox) {
 	
-	var is_valid_image = function(elem) {
+	function is_valid_image(elem) {
 		var $img = $(elem);
 		if (!$img.is('img')) {
 			// not an img element
@@ -20,14 +20,14 @@ define(['jquery', 'elgg/lightbox'], function($, lightbox) {
 		return true;
 	}
 	
-	var get_image_url = function(elem) {
+	function get_image_url(elem) {
 		var $img = $(elem);
 		if (!$img.is('img')) {
 			return '';
 		}
 		
 		var data = $img.data();
-		if ((typeof data.highresUrl !== 'undefined')) {
+		if (typeof data.highresUrl !== 'undefined') {
 			return data.highresUrl;
 		}
 		
@@ -53,21 +53,19 @@ define(['jquery', 'elgg/lightbox'], function($, lightbox) {
 		
 		var title = false;
 		if ($img.attr('title')) {
-			title = $img.attr('title'); 
+			title = $img.attr('title');
 		} else if ($img.attr('alt')) {
 			title = $img.attr('alt');
 		}
-		
-		var opts = {
+				
+		lightbox.open({
 			width: '80%',
 			height: '80%',
 			maxWidth: '990px',
 			maxHeight: '80%',
 			title: title,
 			html: '<div style="width: 100%; height: 100%; background-image:url(' + src + '); background-position: center center; background-size: contain; background-repeat: no-repeat;"></div>',
-		};
-		
-		lightbox.open(opts);
+		});
 	});
 
 	$(document).on('mouseenter', '.elgg-output img', function() {
@@ -79,9 +77,7 @@ define(['jquery', 'elgg/lightbox'], function($, lightbox) {
 			return;
 		}
 		
-		var $img = $(this);
-		
 		// adds a pointer cursor to the image
-		$img.css('cursor', 'zoom-in');
+		$(this).css('cursor', 'zoom-in');
 	});
 });

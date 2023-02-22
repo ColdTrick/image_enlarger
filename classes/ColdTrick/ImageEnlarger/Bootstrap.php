@@ -4,6 +4,9 @@ namespace ColdTrick\ImageEnlarger;
 
 use Elgg\DefaultPluginBootstrap;
 
+/**
+ * Plugin bootstrap
+ */
 class Bootstrap extends DefaultPluginBootstrap {
 	
 	/**
