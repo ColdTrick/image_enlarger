@@ -13,6 +13,6 @@ class Bootstrap extends DefaultPluginBootstrap {
 	 * {@inheritDoc}
 	 */
 	public function init() {
-		elgg_require_js('image_enlarger');
+		elgg_import_esm('image_enlarger');
 	}
 }
