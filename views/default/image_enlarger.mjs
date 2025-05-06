@@ -50,21 +50,11 @@ $(document).on('click', '.elgg-output img', function() {
 		return;
 	}
 	
-	var $img = $(this);
-	
-	var title = false;
-	if ($img.attr('title')) {
-		title = $img.attr('title');
-	} else if ($img.attr('alt')) {
-		title = $img.attr('alt');
-	}
-	
 	lightbox.open({
 		width: '80%',
 		height: '80%',
 		maxWidth: '990px',
 		maxHeight: '80%',
-		title: title,
 		html: '<div style="width: 100%; height: 100%; background-image:url(' + src + '); background-position: center center; background-size: contain; background-repeat: no-repeat;"></div>',
 	});
 });
