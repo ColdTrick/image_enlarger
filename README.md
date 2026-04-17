@@ -2,6 +2,7 @@ Image Enlarger
 ==============
 
 ![Elgg 6.0](https://img.shields.io/badge/Elgg-6.0-green.svg)
+![Elgg 7.0](https://img.shields.io/badge/Elgg-7.0-green.svg)
 ![Lint Checks](https://github.com/ColdTrick/image_enlarger/actions/workflows/lint.yml/badge.svg?event=push)
 [![Latest Stable Version](https://poser.pugx.org/coldtrick/image_enlarger/v/stable.svg)](https://packagist.org/packages/coldtrick/image_enlarger)
 [![License](https://poser.pugx.org/coldtrick/image_enlarger/license.svg)](https://packagist.org/packages/coldtrick/image_enlarger)
