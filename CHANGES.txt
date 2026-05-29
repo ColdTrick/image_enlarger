@@ -1,6 +1,10 @@
 Version history
 ===============
 
+5.1.1 (2026-05-29):
+
+- several small chores/fixes
+
 5.1 (2025-05-07):
 
 - changed: no longer show img alt or title in lightbox
